@@ -19,6 +19,7 @@ ALLOWED_HOSTS = ['*', '.vercel.app']
 # Application definition
 
 INSTALLED_APPS = [
+    'whitenoise.runserver_nostatic',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -93,7 +94,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
-
+import os
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
@@ -104,12 +105,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-# Directory paths to look for static files (besides the app-level `static/`)
-STATICFILES_DIRS = [
-    BASE_DIR / "static",  # assuming you have a folder named "static" in your root directory
-]
-
-# Directory where static files will be collected (for production)
-STATIC_ROOT = BASE_DIR / "staticfiles"
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
