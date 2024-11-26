@@ -1,0 +1,29 @@
+<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
+
+    <div class="container">
+        <a class="navbar-brand" href="index.html">PPJ Pralon<span>.</span></a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni"
+            aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsFurni">
+            {% with request.resolver_match.url_name as url_name %}
+            <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+                <li class="nav-item {% if url_name == 'home' %}active{% endif %}">
+                    <a class="nav-link" href="{% url 'home' %}">Beranda</a>
+                </li>
+                <!-- <li><a class="nav-link" href="shop.html">Shop</a></li> -->
+                <li class="nav-item {% if url_name == 'tentang' %}active{% endif %} "><a class="nav-link" href="{% url 'tentang' %}">Tentang </a></li>
+                <li class="nav-item {% if url_name == 'layanan' %}active{% endif %} "><a class="nav-link" href="{% url 'layanan' %}">Layanan</a></li>
+                <li class="nav-item {% if url_name == 'produk' %}active{% endif %} "><a class="nav-link" href="{% url 'produk' %}">Produk</a></li>
+                <li class="nav-item {% if url_name == 'galeri' %}active{% endif %} "><a class="nav-link" href="{% url 'galeri' %}">Galeri</a></li>
+                <li class="nav-item {% if url_name == 'kontak' %}active{% endif %} "><a class="nav-link" href="{% url 'kontak' %}">Kontak</a></li>
+            </ul>
+            {% endwith %}
+        </div>
+    </div>
+
+</nav>
+<!-- End Header/Navigation -->
