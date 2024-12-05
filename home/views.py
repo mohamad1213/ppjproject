@@ -1,4 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from kontak.models import Contact
+from .forms import ContactForm
 
 def index(request):
     return render (request, 'home.html')
@@ -16,4 +18,11 @@ def galeri(request):
     return render (request, 'galeri.html')
 
 def kontak(request):
-    return render (request, 'kontak.html')
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('kontak') 
+    else:
+        form = ContactForm()
+    return render(request, 'kontak.html', {'form': form})
