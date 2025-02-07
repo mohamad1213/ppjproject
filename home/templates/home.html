@@ -10,7 +10,7 @@
                     <p>Proses penggilingan paralon yang efisien dan ramah lingkungan, menghasilkan
                         produk berkualitas tinggi.</p>
                     <p>
-                        <a href="pk1.html" class="btn btn-secondary me-2">Lihat Produk</a>
+                        <a href="{% url 'produk' %}" class="btn btn-secondary me-2">Lihat Produk</a>
                         <a href="https://wa.me/6285156803370" class="btn btn-white-outline" target="_blank">Hubungi
                             Kami</a>
                     </p>
@@ -38,14 +38,14 @@
                 <h2 class="mb-4 section-title">Dihasilkan dari Paralon Berkualitas</h2>
                 <p class="mb-4">Proses penggilingan paralon kami menggunakan material berkualitas tinggi untuk
                     menghasilkan produk yang bersih, seragam, dan siap digunakan oleh industri Anda.</p>
-                <p><a href="pk1.html" class="btn">Lihat Produk</a></p>
+                <p><a href="{% url 'produk' %}" class="btn">Lihat Produk</a></p>
             </div>
 
             <!-- End Column 1 -->
 
             <!-- Start Column 2 -->
             <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-                <a class="product-item" href="pk1.html">
+                <a class="product-item" href="{% url 'produk' %}">
                     <img src="{% static 'frontend/images/bahan/gilinganpk1.jpg' %}" class="img-fluid product-thumbnail">
                     <h3 class="product-title">Cacahan PVC Pralon PK 1</h3>
                 </a>
@@ -54,7 +54,7 @@
 
             <!-- Start Column 3 -->
             <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-                <a class="product-item" href="pk1.html">
+                <a class="product-item" href="{% url 'produk' %}">
                     <img src="{% static 'frontend/images/bahan/gilinganpk2.jpg' %}" class="img-fluid product-thumbnail">
                     <h3 class="product-title">Cacahan PVC Pralon PK 2</h3>
                 </a>
@@ -63,7 +63,7 @@
 
             <!-- Start Column 4 -->
             <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-                <a class="product-item" href="pk1.html">
+                <a class="product-item" href="{% url 'produk' %}">
                     <img src="{% static 'frontend/images/bahan/gilinganabu2.jpg' %}" class="img-fluid product-thumbnail">
                     <h3 class="product-title">Abu Macan</h3>
                 </a>
@@ -171,7 +171,7 @@
                     <li>Gilingan PVC Pralon PK Plafon</li>
                     <li>Gilingan PVC Pralon Mambo</li>
                 </ul>
-                <p><a href="pk1.html" class="btn">Pelajari Lebih Lanjut</a></p>
+                <p><a href="{% url 'produk' %}" class="btn">Pelajari Lebih Lanjut</a></p>
             </div>
         </div>
     </div>
@@ -211,7 +211,7 @@
                                             <div class="author-pic">
                                                 <img src="{% static 'frontend/images/person-1.png' %}" alt="Andi Pratama" class="img-fluid">
                                             </div>
-                                            <h3 class="font-weight-bold">Andi Pratama</h3>
+                                            <h3 class="font-weight-bold">Agniya Najmatussadiah</h3>
                                             <span class="position d-block mb-3">Procurement Manager, PT. Industri
                                                 Bangunan</span>
                                         </div>
@@ -233,7 +233,7 @@
                                             <div class="author-pic">
                                                 <img src="{% static 'frontend/images/person_2.jpg' %}" alt="Siti Aisyah" class="img-fluid">
                                             </div>
-                                            <h3 class="font-weight-bold">Siti Aisyah</h3>
+                                            <h3 class="font-weight-bold">Ahmad Syauqie</h3>
                                             <span class="position d-block mb-3">Operations Manager, PT. Plastik
                                                 Sejahtera</span>
                                         </div>
@@ -320,7 +320,7 @@
 <!-- End Testimonial Slider -->
 
 <!-- Start Blog Section -->
-<div class="blog-section">
+<!-- <div class="blog-section">
     <div class="container">
         <div class="row mb-5">
             <div class="col-md-6">
@@ -373,6 +373,6 @@
 
         </div>
     </div>
-</div>
+</div> -->
 <!-- End Blog Section -->
 {% endblock %}
